@@ -12,7 +12,7 @@ This FastAPI project transcribes audio using Groq Whisper, corrects grammar usin
    .venv\Scripts\activate
    # macOS/Linux
    source .venv/bin/activate
-````
+   ```
 
 3. Install:
 
