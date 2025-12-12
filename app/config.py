@@ -8,7 +8,8 @@ load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 # GROQ (required)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "").strip()
 GROQ_ASR_MODEL = os.getenv("GROQ_ASR_MODEL", "whisper-large-v3").strip()
-GROQ_LLM_MODEL = os.getenv("GROQ_LLM_MODEL", "gpt-4o-mini").strip()  # change if you have specific
+GROQ_LLM_MODEL = os.getenv("GROQ_LLM_MODEL", "llama-3.3-70b-versatile").strip()  # change if you have specific
+
 
 # Optional: HF fallback (only if you want HF fallback)
 USE_HF_FALLBACK = os.getenv("USE_HF_FALLBACK", "false").lower() in ("1","true","yes")
