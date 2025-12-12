@@ -1,17 +1,17 @@
 audio,asr_text,corrected_text,wer,score
-audio_001.wav, This or my book and I loved it., This or my book and I loved it.,0.0,100.0
-audio_002.wav, He don't know the answer so I tell him., He don't know the answer so I tell him.,0.0,100.0
-audio_003.wav, She go to office yesterday then I play a lot., She go to office yesterday then I play a lot.,0.0,100.0
-audio_004.wav, I am having a pen since two years and I too sick of it., I am having a pen since two years and I too sick of it.,0.0,100.0
-audio_005.wav, They was playing outside then I joined them., They was playing outside then I joined them.,0.0,100.0
-audio_006.wav, You must goes there now they must waiting for you., You must goes there now they must waiting for you.,0.0,100.0
-audio_007.wav, These are my notes which I was making from past two days., These are my notes which I was making from past two days.,0.0,100.0
-audio_008.wav, She don't likes drinking tea in morning even when it helps her., She don't likes drinking tea in morning even when it helps her.,0.0,100.0
-audio_009.wav, I am agree with your suggestion that the project should start early., I am agree with your suggestion that the project should start early.,0.0,100.0
-audio_010.wav, The people in our office is thinking the deadline will be extend., The people in our office is thinking the deadline will be extend.,0.0,100.0
-audio_011.wav, He do mistakes when he try to finish the work very fastly., He do mistakes when he try to finish the work very fastly.,0.0,100.0
-audio_012.wav, They didn't ate breakfast because they was running late for class., They didn't ate breakfast because they was running late for class.,0.0,100.0
-audio_013.wav, She is more smarter than her sister but she don't say it., She is more smarter than her sister but she don't say it.,0.0,100.0
-audio_014.wav, Me and my friend is planning a trip but we didn't decide a date., Me and my friend is planning a trip but we didn't decide a date.,0.0,100.0
-audio_015.wav, I can able to complete the task if someone tells me clearly., I can able to complete the task if someone tells me clearly.,0.0,100.0
-audio_016.wav, She cooking dinner right now so she can't able to talk with you., She cooking dinner right now so she can't able to talk with you.,0.0,100.0
+audio_001.wav, This or my book and I loved it.,This is my book and I loved it.,0.125,87.5
+audio_002.wav, He don't know the answer so I tell him.,"He doesn't know the answer, so I tell him.",0.2222,77.78
+audio_003.wav, She go to office yesterday then I play a lot.,"She went to the office yesterday, then I played a lot.",0.4,60.0
+audio_004.wav, I am having a pen since two years and I too sick of it.,I have had a pen for two years and I am too sick of it.,0.2857,71.43
+audio_005.wav, They was playing outside then I joined them.,"They were playing outside, then I joined them.",0.25,75.0
+audio_006.wav, You must goes there now they must waiting for you.,"You must go there now, they must be waiting for you.",0.3,70.0
+audio_007.wav, These are my notes which I was making from past two days.,"These are my notes, which I have been making over the past two days.",0.4167,58.33
+audio_008.wav, She don't likes drinking tea in morning even when it helps her.,"She doesn't like drinking tea in the morning, even when it helps her.",0.3333,66.67
+audio_009.wav, I am agree with your suggestion that the project should start early.,I agree with your suggestion that the project should start early.,0.0833,91.67
+audio_010.wav, The people in our office is thinking the deadline will be extend.,The people in our office think the deadline will be extended.,0.25,75.0
+audio_011.wav, He do mistakes when he try to finish the work very fastly.,He makes mistakes when he tries to finish the work very quickly.,0.25,75.0
+audio_012.wav, They didn't ate breakfast because they was running late for class.,They didn't eat breakfast because they were running late for class.,0.1818,81.82
+audio_013.wav, She is more smarter than her sister but she don't say it.,"She is smarter than her sister, but she doesn't say it.",0.25,75.0
+audio_014.wav, Me and my friend is planning a trip but we didn't decide a date.,"My friend and I are planning a trip, but we haven't decided on a date.",0.6429,35.71
+audio_015.wav, I can able to complete the task if someone tells me clearly.,I will be able to complete the task if someone tells me clearly.,0.1667,83.33
+audio_016.wav, She cooking dinner right now so she can't able to talk with you.,"She is cooking dinner right now, so she won't be able to talk with you.",0.3077,69.23

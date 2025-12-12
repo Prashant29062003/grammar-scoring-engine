@@ -226,3 +226,14 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 
+# Ignore the entire large training and testing audio directories
+test_audio/
+
+train_audio/
+
+
+# accidentally show up somewhere else in your project.
+*.wav
+*.mp3
+*.flac
+*.ogg

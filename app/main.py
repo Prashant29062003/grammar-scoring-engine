@@ -2,11 +2,24 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse, FileResponse
 import sys, os
 import numpy as _np
-from app.transcriber import transcribe_bytes_from_bytes, transcribe_from_path
-from app.grammar import correct_grammar
+
+from app.transcriber_enhanced import transcribe_bytes_from_bytes, transcribe_from_path
+
+from app.grammar_enhanced import correct_grammar
+
 from app.scoring import compute_wer_and_score, batch_score
-from app.kaggle_loader import load_audio_files
+
+from app.kaggle_loader import load_audio_files, load_train_audio_files, load_test_audio_files
+from app.kaggle_inference import run_kaggle_inference
+
+from app.train_evaluate import run_train_evaluation
+from app.model_train import train_regression_model
+from app.model_predict import predict_kaggle_submission
+
+
 from app.utils import save_results_csv
+
+
 
 app = FastAPI(title="Grammar Scoring Engine",
               description="ASR (Groq) → Grammar (Groq LLM/HF fallback) → WER & Score",
@@ -108,3 +121,24 @@ def download_csv():
         media_type="text/csv",
         filename="submission_results.csv"
     )
+
+
+@app.post("/kaggle/submit")
+def kaggle_submit():
+    path = run_kaggle_inference()
+    return {"message": "submission ready", "file": path}
+
+@app.post("/train/evaluate")
+def train_evaluate():
+    path = run_train_evaluation()
+    return {"message": "train evaluation complete", "file": path}
+
+@app.post("/model/train")
+def model_train():
+    result = train_regression_model()
+    return result
+
+@app.post("/model/predict-kaggle")
+def model_predict():
+    path = predict_kaggle_submission()
+    return {"message": "submission ready", "file": path}

@@ -1,4 +1,4 @@
-from app.grammar import correct_grammar
+from app.grammar_enhanced import correct_grammar
 from app.scoring import compute_wer_and_score
 
 def score_text_item(text: str):
