@@ -49,7 +49,7 @@ async def score_endpoint(file: UploadFile = File(...)):
 # Batch: process local kaggle_data/audio using dataset.csv
 @app.post('/batch/process-kaggle')
 def batch_process_kaggle():
-    pairs = load_dataset_pairs()  # returns list of dicts with keys 'audio_path','bad','corrected'
+    pairs = load_dataset_pairs()
     results = []
     for p in pairs:
         audio_path = p['audio_path']
@@ -66,19 +66,18 @@ def batch_process_kaggle():
                 'dataset_corrected': p['corrected'],
                 'asr_text': asr,
                 'corrected_text': corrected,
-                'wer': round(wer_val,4),
+                'wer': round(wer_val, 4),
                 'score': score
             })
         except Exception as e:
             results.append({**p, 'error': str(e)})
-
-    out_path = 'kaggle_data/submission_results.csv'
+    out_path = os.path.join('data', 'kaggle_samples', 'submission_results.csv')
     save_results_csv(results, out_path)
     return {'message': 'done', 'processed': len(results), 'csv': out_path}
 
 @app.get('/batch/download-submission')
 def download_submission():
-    p = 'kaggle_data/submission_results.csv'
+    p = 'data/submission_results.csv'
     if not os.path.exists(p):
         raise HTTPException(status_code=404, detail='submission not found')
     return FileResponse(p, media_type='text/csv', filename='submission_results.csv')
